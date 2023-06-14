@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 2252786863333008000}
   - component: {fileID: 2463536669912381671}
   - component: {fileID: 8958747931767321190}
+  - component: {fileID: 6719503200680192608}
   m_Layer: 0
   m_Name: JewelObject
   m_TagString: Untagged
@@ -313,6 +314,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1787279803114964474}
+  canvasGroup: {fileID: 0}
+--- !u!114 &6719503200680192608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932271258742318739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81a113be0581144fa147bfe4b0589c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliders:
+  - {fileID: 2463536669912381671}
+  dropTargets:
+  - {fileID: 0}
 --- !u!1 &932271259274812114
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ItemSlot : MonoBehaviour, IDropHandler
+{
+
+    [SerializeField] private ParticleSystem _particleSystem;
+
+    private void Start()
     {
+        _particleSystem.Stop();
+    }
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -13,5 +20,8 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
         }
+
+        _particleSystem.Play();
+
     }
 }
