@@ -89,4 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0504e3d27a395c647933a48d9dea7edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleSystem: {fileID: 0}
+  _itemSlotToOpen: {fileID: 0}
+  _image: {fileID: 0}
+  jewelJuiceScript: {fileID: 1175491099528118372, guid: a491cedc9eacf9e478a45f02bab35b74, type: 3}

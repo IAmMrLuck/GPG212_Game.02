@@ -277,6 +277,7 @@ MonoBehaviour:
   _outline: {fileID: 1175491100223081625}
   _rectTransform: {fileID: 625731570691589650}
   _particleSystem: {fileID: 0}
+  soundManager: {fileID: 5311175978875108155, guid: c5c9d3d4088d9aa4d8fea2376ae58358, type: 3}
   sortingLayerName: Jewels
   sortingOrder: 1
   trailRenderer: {fileID: 0}

@@ -13,6 +13,7 @@ public class JewelJuice : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
     [SerializeField] private Outline _outline;
     [SerializeField] private RectTransform _rectTransform;
     [SerializeField] private ParticleSystem _particleSystem;
+    public SoundManager soundManager;
 
     public string sortingLayerName = "Jewels";
     public int sortingOrder = 1;
@@ -35,6 +36,7 @@ public class JewelJuice : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
         Debug.Log("Pointer Over");
         _text.enabled = true;         //pop-up name
         _outline.enabled = true; //Hightlight the image       
+        soundManager.Play("Touch");
         //soundclip
     }
 
