@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
 
-    [SerializeField] private ParticleSystem _particleSystem;
+    [SerializeField] private GameObject _itemSlotToOpen;
+    [SerializeField] private Image _image;
 
     private void Start()
     {
-        _particleSystem.Stop();
+        _itemSlotToOpen.SetActive(false);
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -20,8 +22,8 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
         }
-
-        _particleSystem.Play();
+        _image.enabled = false;
+        _itemSlotToOpen.SetActive(true);
 
     }
 }

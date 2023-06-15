@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class JewelSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private GameObject jewelToSpawn;
+    [SerializeField] private Transform canvasTransform;
+    [SerializeField] private Transform placeToSpawn;
+
+
+    public void SpawnTheGem()
     {
-        
+        GameObject currentGem = Instantiate(jewelToSpawn, placeToSpawn);
+        currentGem.transform.position = placeToSpawn.position;
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

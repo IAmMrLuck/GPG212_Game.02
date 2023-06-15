@@ -9,11 +9,10 @@ public class Jewels : ScriptableObject
 
     public string jewelName;
 
-    public List<AudioClip> jewelSounds;
-
-    
-
-
+    public AudioClip jewelTouch;
+    public AudioClip jewelPutDown;
+    public AudioClip jewelPop;
+     
 
 
 }

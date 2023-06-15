@@ -21,8 +21,7 @@ public class JewelJuice : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
 
 
     private void Start()
-    {
-
+    {   
         _text.enabled = false;
         _outline.enabled = false;
 
@@ -37,7 +36,6 @@ public class JewelJuice : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
         _text.enabled = true;         //pop-up name
         _outline.enabled = true; //Hightlight the image       
         //soundclip
-
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -45,8 +43,8 @@ public class JewelJuice : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
         Debug.Log("Pointer Exit");
         _text.enabled=false;        //remove pop-name
         _outline.enabled = false; //Stop Hightlighting the image
-
     }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("OnBeginDrag");
@@ -58,7 +56,6 @@ public class JewelJuice : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
     {
         Debug.Log("OnEndDrag");
         _canvasGroup.alpha = 1f;
-
     }
 
     public void OnPointerDown(PointerEventData eventData)

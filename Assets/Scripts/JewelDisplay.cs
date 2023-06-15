@@ -4,14 +4,18 @@ using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 
 public class JewelDisplay : MonoBehaviour
 {
 
-    public Jewels jewels;
+
+    public Jewels currentJewel;
 
     public TMP_Text nameText;
     public Image jewelImage;
+
+    public Jewels[] scriptableObjects;
 
     public List<AudioClip> jewelAudio; 
     /// <summary>
@@ -21,11 +25,14 @@ public class JewelDisplay : MonoBehaviour
 
     void Start()
     {
+        int randomNumber = Random.Range(0, scriptableObjects.Length);
+        currentJewel = scriptableObjects[randomNumber];
 
-        nameText.text = jewels.name;
 
-        jewelImage.sprite = jewels.jewelSprite;
-        
+
+        nameText.text = currentJewel.name;
+
+        jewelImage.sprite = currentJewel.jewelSprite;
 
     }
 

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bf51525d3a51b4893ec8c345506bd0, type: 3}
+  m_Name: Ruby
+  m_EditorClassIdentifier: 
+  jewelSprite: {fileID: 21300000, guid: 21160aa7ab6ffec43b527b5404bc4232, type: 3}
+  jewelName: Ruby
+  jewelSounds: []
