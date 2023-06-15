@@ -14,11 +14,21 @@ public class JewelJuice : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
     [SerializeField] private RectTransform _rectTransform;
     [SerializeField] private ParticleSystem _particleSystem;
 
-    private void Awake()
+    public string sortingLayerName = "Jewels";
+    public int sortingOrder = 1;
+
+    [SerializeField] private TrailRenderer trailRenderer;
+
+
+    private void Start()
     {
-        
+
         _text.enabled = false;
         _outline.enabled = false;
+
+        trailRenderer = GetComponent<TrailRenderer>();
+        trailRenderer.sortingLayerName = sortingLayerName;
+        trailRenderer.sortingOrder = sortingOrder;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
